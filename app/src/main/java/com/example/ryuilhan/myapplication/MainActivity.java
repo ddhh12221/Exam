@@ -120,10 +120,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        BT2 = (Button)findViewById(R.id.button2);
+
         BT2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                LL3.setVisibility(View.GONE);
+                LL5.setVisibility(View.VISIBLE);
             }
         });
     }

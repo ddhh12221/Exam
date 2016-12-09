@@ -36,12 +36,12 @@
         android:id="@+id/FrameLAyout1"
         android:layout_height="453dp"
         android:layout_gravity="center_vertical"
-        android:visibility="visible"
         android:layout_weight="0.78">
 
         <LinearLayout
             android:id="@+id/LinearLayout3"
             android:orientation="vertical"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1">
@@ -165,14 +165,6 @@
                     android:id="@+id/button2"
                     android:layout_weight="0.43" />
 
-                <LinearLayout
-                    android:id="@+id/LinearLayout5"
-                    android:visibility="invisible"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                </LinearLayout>
             </LinearLayout>
 
             <TextView
@@ -194,6 +186,76 @@
                 android:id="@+id/textView7" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayout5"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="46dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간 예약"
+                    android:id="@+id/textView8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.04">
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일자 설정"
+                        android:id="@+id/radioButton4"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시간 설정"
+                        android:id="@+id/radioButton5"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.66">
+
+                <CalendarView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calendarView" />
+
+                <TimePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/timePicker" />
+            </FrameLayout>
+        </LinearLayout>
+
 
     </FrameLayout>
 
