@@ -55,9 +55,7 @@ public class MainActivity extends AppCompatActivity {
     Button BT1;
     Button BT2;
 
-    int sum = 0;
-    double dc = 0.0;
-    double total = 0;
+
 
     CalendarView CV1;
     TimePicker TP1;
@@ -122,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
                 double ad2 = Double.parseDouble(ET2.getText().toString());
                 double ch = Double.parseDouble(ET3.getText().toString());
                 double total2=0.0;
+                int sum = 0;
+                double dc = 0.0;
+                double total = 0;
                 sum = Integer.parseInt(ET1.getText().toString()) + Integer.parseInt(ET2.getText().toString()) + Integer.parseInt(ET3.getText().toString());
                 total = (ad*15000)+(ad2*12000)+(ch*8000);
                 TV5.setText(TV5.getText()+Integer.toString(sum));
@@ -140,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                     TV7.setText(TV7.getText()+Double.toString(total));
                     dc = total2-total;
                     TV6.setText(TV6.getText()+Double.toString(dc));
+
                 }else if (RB2.isChecked()){
                     total=total*0.9;
                     TV7.setText(TV7.getText()+Double.toString(total));
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         BT2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LL3.setVisibility(View.GONE);
+                LL3.setVisibility(View.INVISIBLE);
                 LL5.setVisibility(View.VISIBLE);
             }
         });
